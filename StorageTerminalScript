@@ -1,0 +1,8 @@
+local bins = GetPartsFromPort(1, "Bin")
+local screen = getPartFromPort(2, "TouchScreen")
+
+local function ReloadScreen()
+	screen:ClearElements()
+  local MaterialList = {}
+	for i, bin in ipairs(bins) do
+		MaterialList[i] = bins[i]
